@@ -1,0 +1,374 @@
+/* variables */
+:root {
+    --nav-spacer: 50px;
+    --clr-primary-100: #222222;
+    --clr-primary-200: #0656b4;
+    --clr-secondary: #F1F1F1;
+    --clr-neutral-100: #d8d8d8;
+    --clr-neutral-200: #767676;
+    --fs-100: 14px;
+    --ff-main: "Roboto", sans-serif;
+    --ff-primary: "Open Sans", sans-serif;
+}
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin_cyrillic-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/roboto-v30-latin_cyrillic-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin_cyrillic-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/roboto-v30-latin_cyrillic-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin_cyrillic-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v34-latin_cyrillic-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/open-sans-v34-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/open-sans-v34-latin_cyrillic-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/open-sans-v34-latin_cyrillic-regular.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-500 - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/open-sans-v34-latin_cyrillic-500.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/open-sans-v34-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/open-sans-v34-latin_cyrillic-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/open-sans-v34-latin_cyrillic-500.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-600 - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/open-sans-v34-latin_cyrillic-600.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/open-sans-v34-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/open-sans-v34-latin_cyrillic-600.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-600.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-600.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/open-sans-v34-latin_cyrillic-600.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/open-sans-v34-latin_cyrillic-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/open-sans-v34-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/open-sans-v34-latin_cyrillic-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/open-sans-v34-latin_cyrillic-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/open-sans-v34-latin_cyrillic-700.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: var(--ff-primary);
+}
+
+/* default resets */
+
+img {
+    display: block;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* sticky footer */
+.site-main {
+    flex-grow: 1;
+}
+
+/* utility classes */
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mx-0 {
+    margin-inline: 0;
+}
+
+.my-0 {
+    margin-block: 0;
+}
+
+.px-0 {
+    padding-inline: 0;
+}
+
+.py-0 {
+    padding-block: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bordered-1 {
+    border: 1px solid var(--clr-neutral-100);
+}
+
+.p-1 {
+    padding: 8px 16px;
+}
+
+.rounded-1 {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    margin-bottom: 16px;
+    padding: 14px 28px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 14px;
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 7px;
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary-200);
+}
+
+.text-neutral-200 {
+    color: var(--clr-neutral-200);
+}
+
+.navigation--mobile {
+    display: none;
+}
+
+.navigation--mobile.show{
+    display: block;
+}
+
+.navigation--mobile .navigation__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    padding-inline: 16px;
+    padding-top: 24px;
+    background-color: #fff;
+}
+
+.navigation--mobile::before {
+    position: absolute;
+    inset: 0;
+    left: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "";
+}
+
+.regions {
+    margin-bottom: 30px;
+}
+
+.regions__description {
+    font-size: 12px;
+}
+
+.regions__current {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.navigation__close {
+    position: absolute;
+    top: 0;
+    right: -15%;
+    font-size: 2rem;
+    color: var(--clr-secondary);
+}
+
+.signup-btn {
+    display: block;
+    margin-inline: auto;
+}
+
+.navigation__category-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation__category-btn {
+    padding-bottom: 12px;
+    position: relative;
+    cursor: pointer;
+    font-family: var(--ff-main);
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--clr-neutral-200);
+}
+
+.navigation__category-btn.active {
+    font-weight: bold;
+    color: var(--clr-primary-100);
+}
+
+.line {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: var(--clr-neutral-100);
+    z-index: 100;
+}
+
+.navigation__categories {
+    display: none;
+}
+
+.navigation__categories.open {
+    display: block;
+}
+
+.navigation__category {
+    padding: 10px 16px;
+    font-size: 15px;
+    color: #222;
+}
+
+.navigation__list{
+    display: grid;
+    gap: 20px;
+}
+
+.navigation__item {
+    padding-inline: 16px;
+    color: #767676;
+    font-size: 12px;
+}
+
+@media screen and (min-width:992px){
+    
+}

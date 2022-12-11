@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- js -->
+    <script src="./js/app.js" defer></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- page info -->
+    <title>Sample Page</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper">
+                <!-- hamburger menu -->
+                <button class="site-header__btn hamburger-btn" aria-controls="#mobileNav" id="hamburgerBtn">
+                    <img src="./images/menu.svg" alt="hamburger icon">
+                </button>
+
+                <!-- mobile navigation -->
+                <nav class="navigation navigation--mobile" id="mobileNav">
+                    <div class="navigation__inner">
+                        <button class="navigation__btn signup-btn btn-primary">
+                            Войти
+                        </button>
+                        <div class="navigation__regions regions bordered-1 rounded-1 p-1" id="regions">
+                            <p class="regions__description mt-0 mb-0 text-neutral-200">Город или регион</p>
+                            <h3 class="regions__current my-0" id="currentLocation">Москва</h3>
+                        </div>
+                        <div class="navigation__category-btns" id="categoryBtns">
+                            <button class="navigation__category-btn active" data-category="high">
+                                Высшее
+                            </button>
+                            <button class="navigation__category-btn" data-category="medium">
+                                Среднее
+                            </button>
+                        </div>
+                        <div class="line"></div>
+
+                        <ul class="navigation__categories navigation__categories--medium" data-categories="medium">
+                            <li class="navigation__category">Колледжи</li>
+                            <li class="navigation__category">Техникумы</li>
+                            <li class="navigation__category">Училища</li>
+                            <li class="navigation__category">Специальности</li>
+                        </ul>
+
+                        <ul class="navigation__categories navigation__categories--high open" data-categories="high">
+                            <li class="navigation__category">Вузы</li>
+                            <li class="navigation__category">Специальности</li>
+                        </ul>
+
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                Профессии
+                            </li>
+                            <li class="navigation__item">
+                                Отзывы студентов
+                            </li>
+                            <li class="navigation__item">
+                                Реклама на сайте
+                            </li>
+                        </ul>
+                        <button class="navigation__close" id="closeNavBtn">
+                            X
+                        </button>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+</body>
+
+</html>
